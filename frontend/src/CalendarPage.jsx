@@ -14,7 +14,7 @@ export default function CalendarPage() {
         setLoading(true);
         setError('');
         try {
-            const response = await fetch('http://localhost:3000/api/workouts');
+            const response = await fetch(`http://${window.location.hostname}:3000/api/workouts`);
             if (!response.ok) throw new Error('Failed to fetch data');
             const data = await response.json();
             setWorkouts(data);

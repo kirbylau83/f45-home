@@ -46,7 +46,19 @@ npm install
 npm run dev
 ```
 
-The web app will now be running on the port provided by Vite (usually `http://localhost:5173` or `5174`).
+The web app will now be running on the port provided by Vite, and exposed to your local network.
+
+### 3. Running on iOS (iPhone/iPad)
+
+To view and interact with the app on your iPhone:
+
+1. Connect your iPhone to the **same Wi-Fi network** as your Mac.
+2. Find your Mac's Local IP Address (e.g., `192.168.1.X`). You can find this in your Mac's `System Settings -> Network -> Wi-Fi -> Details`.
+3. Keep both the backend (`npm start` in `/backend`) and frontend (`npm run dev` in `/frontend`) running on your Mac.
+4. On your iPhone, open Safari and type in your Mac's IP address followed by the frontend port (typically 5173). 
+   - Example URL: `http://192.168.1.X:5173`
+
+The frontend will load on your phone and automatically connect to the backend running on your Mac!
 
 ## Tech Stack
 - Frontend: React 19, Vite, Tailwind CSS v4, React-Calendar, Lucide-React
